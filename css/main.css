@@ -1,0 +1,105 @@
+body { overflow:hidden; width:100%; height:100%; margin:0; padding:0; font-size:11px; border:0; line-height:10px; font-family:Helvetica; }
+a { color:#000; text-decoration:none; } a:hover { text-decoration:none; }
+p, div { margin:0; padding:0; border:0; }
+
+/* ******************************************* SIR PANEL (QUERIES, FILTERS) ********************************************** */
+#sirbar { position:absolute; width:100%; height:auto; left:0px; top:20%; background-color:#DC7; overflow:hidden; z-index:30; padding:0; 
+	margin-top:1px; -moz-box-shadow: 0px 3px 3px #ccc; border-bottom:1px solid #FFF; }
+	.sb_section { padding:4px 0; float:left; }
+		#sirbar_feedback { width:79%; margin-left:0.5%; margin-top:3px; }
+		#sirbar_login { width: 19.5%; margin-left:0.5%; text-align:right;}
+			#sirbar_login  img{ padding-top:5px; }
+		
+.sirpanel { position:absolute; width:100%; height:20%; left:0px; top:0px; background-color:#DC7; overflow:hidden; }
+	.panelwrap { position:absolute; height:100%; overflow:hidden; top:0px; }
+		#pw_sirdar { left:0px; width:20%; background-color: rgba(255, 255, 255, .5); -moz-box-shadow: 4px 0px 3px #333; }
+			.sirdar_logo { font-size:5em; text-align:center; margin-top:10px; line-height:1em; 
+				font-weight:bold; color:#000; text-shadow: 3px 3px 0px #DC7;}
+			.sirdar_status { font-size:1.3em; font-weight:bold; margin:5px 10px; line-height:1.2em; }
+			.sirdar_login { position:absolute; bottom:0px; width:100%; text-align:left; font-weight:normal; margin:5px 0 0 0; background-color:#DC7;padding:5px 10px; border-top:1px solid #FFF; -moz-box-shadow: 0px 0px 2px #333; }
+			/*.sirdar_login img { position:absolute; margin:0px 0 0 4px; }*/
+		#pw_query { left:20%; width:30%; z-index:5; border-right: 1px #FFF solid; border-left: 1px #FFF solid; }
+		#pw_filter { left:50%; width:35%; z-index:5; border-right: 1px #FFF solid;  }
+		#pw_tools { left:85%; width:15%; }
+		.panelhead { position: relative; width:100%; font-weight:bold; font-size:1.2em; padding:0.4em 0 0.3em 0;
+			text-align:center; background-color: rgba(255, 255, 255, .5); border-bottom: 1px #FFF solid;
+			-moz-box-shadow: 0px 4px 3px #333;
+		}
+		.panelbody { position: relative; width:100%; }
+			.pb_slide { position:relative; float:left; margin:0; height:100%;  width: 100%; }
+				.pb_box_button { float:left; padding:10px; text-align:center; border:1px #FFF solid; margin:10px 0 0 10px; 
+					-moz-box-shadow: 0px 2px 2px #333; background-color:#FE9; cursor:pointer;
+				}
+				.pb_box_button:hover { background-color:#BA5; color:#FFF; }
+				
+				.backbutton { position:absolute; right:10px; top:0px; }
+				.pb_slide select { margin-left:10px; }
+				.pb_slide p { margin:10px; font-size:1.2em; font-weight:bold; clear:left; }
+				.pb_slide button { border:1px #FFF solid; margin:10px; padding:10px; text-align:center; 
+					-moz-box-shadow: 0px 3px 3px #333; background-color:#FE9; cursor:pointer;  }
+				.pb_slide input { border:1px solid #000; padding:3px; font-size:0.9em;}
+				#container_slide2a, #container_slide2b, #container_slide2c  { display:none; }
+				
+				
+		.panelfoot { position: absolute; width:100%; bottom:0px; font-weight:normal; font-size:1em; text-align:center; 
+			padding-top:0.4em; background-color: rgba(255, 255, 255, .5); border-top: 1px #FFF solid;
+		}
+
+/* ******************************************* SIR BOXES (SIRSTAGE) ********************************************** */
+.sirstage { position:absolute; width:95%; height:76%; bottom:0px; background-color:#FFF; overflow:auto; padding:0% 2.5%; z-index:10;}
+
+.sirwrap { float:left; position:relative; width: 150px; height: 125px; margin:5px; border:2px solid #FFF; }
+.sirwrap:hover { border:2px #AAA dotted; }
+	.sirsummwrap { position:absolute; width:77%; height:90%; top:5%; left:3%; background-color:#FE9; border: 1px solid #000; z-index:10;
+		-moz-box-shadow: 0px 3px 3px #ccc; overflow:hidden; cursor:pointer;
+	}
+		.sirsummrow { width:92%; padding:2.5% 4%; line-height:1.1em; word-wrap:break-word; }
+		.inforowA { background-color: rgba(255, 255, 255, .4); font-weight:bold; text-align:center; font-size:1.1em; border-bottom:#333 solid 1px; }
+		.inforowB { background-color: rgba(255, 255, 255, .7); }
+		.inforowC { background-color: rgba(255, 255, 255, .5); }
+	.siractwrap { position:absolute; width:23%; height:80%; top:10%; right:3%; background-color:#DC7; border: 1px solid #000; z-index:5; 
+		-moz-box-shadow: 0px 3px 3px #ccc;
+	}	
+		.siractrow { background-color: rgba(255, 255, 255, .1); width:100%; text-align:right; }
+		.siractrow img { width:14px; margin:5px 5px 5px 0px; cursor:pointer; }
+
+		
+/* ******************************************* SIR DETAIL ********************************************** */
+.dialog { position:absolute; z-index:100; -moz-box-shadow: 0px 2px 2px 2px #333; }
+	#sirdar_detail_dialog { background-color: #DC7; border:#FFF solid 2px; width:300px; display:none; top:20%; height:auto; margin-top:2px;}
+	#sd_close { position:absolute; top:1px;right:3px; z-index:105; cursor:pointer; }
+	#sd_link { position:absolute; top:1px;left:3px; z-index:105; cursor:pointer; font-size:0.9em;}
+		
+	#sd_hd { position: relative; float:left; background-color: rgba(255, 255, 255, .8); text-align:center; font-weight:bold; font-size:1.2em; padding:6px 5px 4px 5px; width:290px; border-bottom:1px #FFF solid; cursor:move;}
+	
+	.sd_key { position: relative; float:left; width: 129px; padding:5px; background-color: rgba(255, 255, 255, .5); text-align:right; font-weight:bold; border-bottom:1px solid #CCC; border-right:1px solid #CCC; clear:left;}
+	.sd_value { position: relative; float:left;  width: 148px; padding:5px; background-color: rgba(255, 255, 255, .2); }
+		.longform { width:290px; border:0px; text-align:left; line-height:1.2em; }
+
+#sd_tabs { height: auto; margin-top:21px; } 
+	
+/* ******************************************* TAG SYSTEM ********************************************** */
+#large_stage_dialog { z-index:75; width:620px; height:400px; padding:10px; background-color:#BA5; top:50%; left:50%; 
+	margin-left:-320px; margin-top:-200px; display:none;}
+	#lsd_hd { position: absolute; top: 0px; left:0px;background-color: rgba(255, 255, 255, .8); text-align:center; font-weight:bold; font-size:1.2em; padding:6px 5px 4px 5px; width:630px; border-bottom:1px #FFF solid; }	
+	#lsd_close { position:absolute; top:1px;right:3px; z-index:80; cursor:pointer; }
+
+#available_tags_dialog { width:300px; background-color: rgba(255, 255, 255, .5); display:none; height:200px; }
+
+#existing_tags_dialog { width:300px; background-color: rgba(255, 255, 255, .5); display:none; height:160px; }
+	.tags_hd { position: absolute; top: 0px; left:0px;background-color: rgba(255, 255, 255, .8); text-align:center; font-weight:bold; font-size:1.2em; padding:6px 5px 4px 5px; width:290px; border-bottom:1px #FFF solid; }	
+	.tagholder { background-color:#FFF; border:2px #000 solid; margin:25px 5px 5px 5px; width:276px; padding:5px; height:110px; }
+	.tagholder_receive { border:2px #000 dashed; }
+	
+	.tag { float:left; padding:5px; margin:0 5px 5px 0; background-color:#FE9; cursor:pointer; 
+		border:1px #BA5 solid; -moz-box-shadow: 1px 1px 1px #000;}
+	
+.ui-draggable-dragging { background-color: #DC7; }
+.tagdrag { border:1px #BA5 dashed; }
+	
+
+/* ******************************************* LOGIN ********************************************** */
+.loginbg { position:absolute; border:1px #BA5 solid; background-color:#ED8; width:25%; height:auto; margin-left:-12.5%; left:50%; top:50%; margin-top:-100px; -moz-box-shadow: 0px 0px 10px 5px #430; }
+.loginform { margin:10px; font-family:Helvetica; text-align:center; font-size:1.2em; line-height:1em; font-weight:bold;}
+.sirdar_logo_login { font-family:Helvetica; font-size:4em; text-align:center; margin:10px; line-height:1em; color:#000; text-shadow: 3px 3px 0px #BA5;  }
+.loginform input { border:#000 solid 1px; font-family:Helvetica; -moz-box-shadow: 1px 1px 1px #000; text-align:center;}
