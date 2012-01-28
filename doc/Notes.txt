@@ -22,3 +22,9 @@ Process-level entries, if they exist, are overlayed on the template to generate 
 	
 	The process value represents the delta.
 	
+
+Possible "Snap-ins":
+MDD Feeds
+Perfmon Levels
+CGMapProd
+CGMapFeed

@@ -1,0 +1,10 @@
+
+a { cursor:pointer; color:#000; text-decoration:none; }
+
+.dialog { position:absolute; background-color:#e5eCf9; border:1px solid #ccc; left:50%; top:200px; margin-left:-315px; display: none; }
+
+	#cfg_dialog_close { position:absolute; top:4px; right:4px; cursor:pointer; }
+	#cfg_table td, #cfg_table th { cursor:pointer; }
+
+input.dtdate { width: 70px; }
+input.dttime { width: 58px; }
