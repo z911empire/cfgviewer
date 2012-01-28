@@ -1,5 +1,6 @@
 <?php
-	$MAIN_SITE="cfgviewer"; # figure out a way to do this better.
+	preg_match("/^\W(\w+)\W/", $_SERVER['PHP_SELF'], $mainsite);
+	$MAIN_SITE=$mainsite[1];
 	$DIR_OFFSET=(preg_match("/include$/", getcwd())) ? "../" : ""; # especially this
 	$ENGINE_PATH="include/cfg_engine.php";
 	include($DIR_OFFSET."cfg/functions.php");
