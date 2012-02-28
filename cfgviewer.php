@@ -33,7 +33,7 @@
 <?php drawCfgDialog(); ?>
 
 	<div class="container">
-		<h2><a href="cfgviewer.php">Configuration Viewer</a></h2>
+		<h2><a href="index.php"><?php echo $MAIN_SITE; ?></a> <a href="cfgviewer.php">Configuration Viewer</a></h2>
 		
 		<?php if (vV($_GET['notice'])) { 
 				switch ($_GET['notice']) {
